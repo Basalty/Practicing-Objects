@@ -1,0 +1,30 @@
+Allen = Student("123", "Allen", "Allenson")
+Becky = Student("456", "Becky", "Beckyson")
+print(Allen.get_full_name(),Allen.id)
+print(Becky.get_full_name(),Becky.id)
+
+assign1 = Assignments("Assignment_1", 100)
+assign2 = Assignments("Assignment_1", 100)
+assign3 = Assignments("Assignment_2", 100)
+assign4 = Assignments("Assignment_2", 100)
+
+assign1.assign_grade(75)
+assign3.assign_grade(85)
+assign2.assign_grade(90)
+assign4.assign_grade(100)
+
+Allen.submit_assignment(assign1)
+Allen.submit_assignment(assign3)
+Becky.submit_assignment(assign2)
+Becky.submit_assignment(assign4)
+
+print(Allen.get_assignment("Assignment_1").grade, Allen.get_full_name())
+print(Becky.get_assignment("Assignment_1").grade, Becky.get_full_name())
+
+assign = Becky.get_assignments()
+for i in range(len(assign)):
+    print(assign[i].name, assign[i].grade)
+
+print(Becky.get_average())
+Becky.remove_assignment("Assignment_2")
+print(Becky.get_average())
