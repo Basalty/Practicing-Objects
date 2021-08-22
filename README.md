@@ -8,35 +8,58 @@ The specification for these are as follows:
 Students 
 
 Properties
+
   id - an integer representing the student id
+  
   first_name - a string representing the students first name
+  
   last_name - a string representing the students last name
+  
   assignments - a list of assignments
   
+  
 Constructor
+
   Student(id, first_name, last_name)
+  
   Calling Student(123, "Sara", "smith") creates a new student with an ID of 123, first name of Sara and last name of Smith.
   
+  
 Methods
+
   get_full_name() - returns a string that combines the first and last name with a space, for example "Sara Smith".
+  
   get_assignments() - returns a list of all assignments the student has submitted.
+  
   get_assignment(name) - returns the first assignment in the list with a matching name. If no matching assignment is found it returns None.
-  get_average() - returns the average grade of all assignments equally weighted. Ungraded assignments are not counted in the average
-  submit_assignment(assignment) - takes the supplied assignment and adds it to the list of the students submitted assignments
-  remove_assignment(name) - removes the first assignment with a matching name
+  
+  get_average() - returns the average grade of all assignments equally weighted. Ungraded assignments are not counted in the average.
+  
+  submit_assignment(assignment) - takes the supplied assignment and adds it to the list of the students submitted assignments.
+  
+  remove_assignment(name) - removes the first assignment with a matching name.
+  
   
 Assignments
 
+
 Properties
+
   name - a string representing the assignment name
-  max_score - an integer representing the maximum possible score possible to get on the assignment
-  grade - an integer representing the actual score on the assignment
+  
+  max_score - an integer representing the maximum possible score possible to get on the assignment.
+  
+  grade - an integer representing the actual score on the assignment.
+  
   
 Constructor
-  Assignment(name, max_score) - instantiates a assignment with a name of name and a maximum score of max_score. The grade should be initialized to None
+
+  Assignment(name, max_score) - instantiates a assignment with a name of name and a maximum score of max_score. The grade should be initialized to None.
+  
   
 Methods
-  assign_grade(grade) - sets the grade to the supplied integer grade value. If grade is higher than max_score the grade should be set to None
+
+  assign_grade(grade) - sets the grade to the supplied integer grade value. If grade is higher than max_score the grade should be set to None.
   
   
 
